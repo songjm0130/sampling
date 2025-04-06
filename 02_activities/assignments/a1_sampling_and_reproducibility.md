@@ -10,10 +10,36 @@ Modify the number of repetitions in the simulation to 100 (from the original 100
 
 Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-# Author: YOUR NAME
+# Author: Jianmeng Song
 
 ```
-Please write your explanation here...
+Stages of sampling in the code:
+1. Random individuals are affected with the constant attack-rate of 0.10
+    infected_indices = np.random.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)
+Sample size: 10% of len(ppl), here is 0.1*1000 = 100
+Sampling frame: All people (ppl.index)
+Distribution: Uniform distribution
+Relation to the procedure in the blog: try to mimic the process of random selection of individuals infected
+2. Primary contact tracing:
+    ppl.loc[ppl['infected'], 'traced'] = np.random.rand(sum(ppl['infected'])) < TRACE_SUCCESS
+Sample size: the number of people get infected (i.e. 100)
+Sampling frame: only infected individuals
+Distribution: binomial distribution
+Relation to the procedure in the blog: "due to faulty recall of patients and staff shortages, an infection has only a 20% chance of being traced to a source event.", so all infected individuals are sampled, but there is only 20% chance that they can be successfully traced.
+3. Secondary contact tracing:
+    event_trace_counts = ppl[ppl['traced'] == True]['event'].value_counts()
+    events_traced = event_trace_counts[event_trace_counts >= SECONDARY_TRACE_THRESHOLD].index
+    ppl.loc[ppl['event'].isin(events_traced) & ppl['infected'], 'traced'] = True
+Sample size: Based on the number of events that passed the 2 people threshold
+Sampling frame: Infected individuals at events where >= 2 people were successfully traced
+Distribution: N/A
+Relation to the procedure in the blog: this mimics the bias that occurs in the secondary contact tracing: larger or more structured events (like weddings) that takes the individual names are more likely to reach the threshold and be fully traced, even if smaller events (like brunches) have more infections.
+
+This code does not reproduce the graph in the blog post.
+
+After the number of repetitions in the simulation to 100, the graphs changes everytime and are not reproducible.
+
+By setting a random seed, the random sampling of infected individuals and traced individuals happens in the same way each time, then it will be able to reproduced for multiple times of simulation.
 
 ```
 
