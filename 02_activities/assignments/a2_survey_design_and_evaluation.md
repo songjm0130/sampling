@@ -43,24 +43,46 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 The number of your chosen topic: `#`
 
 Describe the purpose of your survey:
-```
-write your answer here...
+``` 
+The purpose of the survey is to investigate the relationship between age and music taste in individuals in Ontario, Canada. The study aims to explore both generational patterns and personal trajectories in musical preferences,
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
-write your answer here...
+Target population: individuals aged 13 and above, living in Ontario
+Sampling frame: indivudals that can be accessible through social media platform, school-affiliated outreach (i.e. students in elementary, middle, high school and university, and their families, friends), companies and community organizations across Ontario, to make sure that individuals from different age groups and socio-economic backgrounds can be sampled.
+Sampling unit: Individual who meet the age and residency criteria. 
+Observational unites: Responses from individuals who are willing to participate in the survey.
+
 ```
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
+1. Which year were you born? _____
+
+2. Please indicate the city you are from _______
+
+3. How often do you listen to music?
+A. Multiple times a day; B. Once a day; C. few times a week; D. Rarely; E. Never
+
+4. Which genres of music do you currently enjoy the most? (Select all that apply)
+A. Pop; B. Rock; C. Hip-hop/Rap; D. R&B/Soul; E. Country; F. Classical; G. Jazz; H. Electronic/Dance; I. Folk/Indie; J. Other (please specify): ____________
+
+5a. Do you feel that your taste in music has changed significantly over time?
+A. Yes; B. Somewhat; C. No
+
+5b. If yes to question 4 -  at approximately what age did you notice this change? ____________?
+
+5c. If your music taste has changed, what influenced this change the most? (Select up to two)
+A. Personal experiences (e.g., life events, aging); B. Friends and social circles; C. Media influence and pop culture; D. Family background E. Streaming platforms/recommendation algorithms; 
+F. Other (please specify): ____________; G. Not applicable
+
+6. Do you feel that today's popular music is better, worse, or about the same as the popular music from when you were younger?
+A. Better; B. Worse; C. About the same; D. Not sure; E. I don’t listen to today’s popular music
+
+7. Looking back, how would you describe the overall direction of your music taste over the years?
+A. It has stayed mostly the same; B. It has gradually evolved to include new genres; C. It has shifted drastically (e.g., from one genre to a completely different one); D. It has become more nostalgic, revisiting music from earlier years; E. I am still figuring out what I really like; F. Other (please specify): ____________
+
 8. write your question here... (optional)
 9. write your question here... (optional)
 10. write your question here... (optional)
@@ -71,7 +93,34 @@ Your 5-10 question survey:
 Identify and describe survey features:
 
 ```
-write your answer here
+1. Sample type: Probability sampling with a stratified design, the stratification is done at the province area level (10 provinces). The information is collcted from one randomy selected household member aged 15 or older. 
+
+2. Sample size: about 20950 individuals responded (response rate 41.9% out of approximated 50000 units)
+
+3. Target population : All persons 15 years of age and older living in the ten provinces of Canada, excluding full-time residents of institutions
+
+4. Sampling frame: Selected hourhold based on stratified random sampling, based on the 2016 Census of Population. 
+
+5. Survey mode(s) : Online questionnaires, Telephone interviews, Face-to-face interviews​
+
+6. Timeline: September to December 2018
+
+7. Response rate: 41.9%
+
+8. Weights: The survey data were weighted in 6 steps to adjust for non-responding telephone numbers, personal weight, personal weight for rejective sampling, external totals, striatum and eventually income adjustment and province-age-sex adjustment to match the external references (province distribution).
+
+9. Data processing: 1.Editing and coding of responses; 2. Imputation for missing data; 3. Weighting to adjust for sampling design and non-response
+
+10. Cleaning, imputation, etc: Imputation was performed using a donor imputation method, where missing values were filled based on similar respondents' data. For income variables, data were linked to administrative tax records for the 2017 T1FF for 81.9% of respondents. For the remaining respondents, missing income data were imputed. 
+
+11. Sources of error: 1. Sampling error due to survey design; 2. Non-response error; 3. Coverage error due to undercoverage of certain population; 4. Processing error during data handling
+
+12. Limitations, known biases, etc: 1. Exclusion of residents from the territories (Yukon, Northwest Territories, and Nunavut) and full-time residents of institutions; 2. Potential underrepresentation of certain demographic groups due to non-response or sampling design; 3. Reliance on self-reported data, which may be subject to social desirability bias​
+
+13. Link to documentation and any additional sources used
+https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&Id=796234
+The microdata files and the guide that was available for download.
+
 ```
 
 ## Rubric
